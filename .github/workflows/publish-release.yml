@@ -1,4 +1,4 @@
-name: Build and Run Tests
+name: Publish Nuget Release
 
 on:
   release:
@@ -12,13 +12,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
-      uses: ./.github/workflows/setup-step.yml
+      uses: ./.github/actions/setup-step.yml
     - name: Build Solution
-      uses: ./.github/workflows/build-step.yml
+      uses: ./.github/actions/build-step.yml
     - name: Run Tests
-      uses: ./.github/workflows/tests-step.yml
+      uses: ./.github/actions/tests-step.yml
     - name: Packing Artifacts
-      uses: ./.github/workflows/pack-step.yml
+      uses: ./.github/actions/pack-step.yml
 
   publish-on-nuget:
 
@@ -26,6 +26,6 @@ jobs:
 
     steps:
     - name: Setup .NET
-      uses: ./.github/workflows/setup-step.yml
+      uses: ./.github/actions/setup-step.yml
     - name: Publish Artifacts
-      uses: ./.github/workflows/publish-step.yml
+      uses: ./.github/actions/publish-step.yml

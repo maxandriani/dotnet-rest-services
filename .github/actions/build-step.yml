@@ -1,4 +1,4 @@
-name: Build .NET Solution
+name: Build .NET Solution Step
 
 on:
   workflow_call:

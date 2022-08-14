@@ -1,4 +1,4 @@
-name: Packing .NET Assemblies
+name: Packing .NET Assemblies Step
 
 on:
   workflow_call:
