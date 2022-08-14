@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "davidanson.vscode-markdownlint",
+        "bierner.markdown-mermaid",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-portuguese-brazilian",
+        "ms-dotnettools.csharp"
+    ]
+}

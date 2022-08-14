@@ -16,8 +16,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
-      uses: ./.github/actions/setup-step.yml
+      uses: ./.github/actions/setup
     - name: Build Solution
-      uses: ./.github/actions/build-step.yml
+      uses: ./.github/actions/build
     - name: Run Tests
-      uses: ./.github/actions/tests-step.yml
+      uses: ./.github/actions/tests

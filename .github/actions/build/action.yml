@@ -1,0 +1,8 @@
+name: Build .NET Solution Step
+description: Padroniza o build da solution
+
+runs:
+  using: "composite"
+  steps:
+  - run: dotnet build -C Release
+    shell: bash
