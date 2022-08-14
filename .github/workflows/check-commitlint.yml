@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
 
 jobs:
   run-commitlint:
@@ -11,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Setup .NET
+    - name: Run commitlint
       run: echo "commitlint run"
