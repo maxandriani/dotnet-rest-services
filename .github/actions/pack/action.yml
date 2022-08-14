@@ -4,9 +4,11 @@ description: Padroniza o pack dos assemblies
 runs:
   using: composite
   steps:
-  - run: dotnet pack
+  - name: Packing Artifacts
+    run: dotnet pack
     shell: bash
-  - uses: actions/upload-artifact@v3.1.0
+  - name: Uploading Artifacts
+    uses: actions/upload-artifact@v3.1.0
     with:
       name: nuget_assemblies
       path: "**/*.nupkg"

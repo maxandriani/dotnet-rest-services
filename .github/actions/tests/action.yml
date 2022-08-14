@@ -4,6 +4,6 @@ description: Padroniza o motor de testes
 runs:
   using: composite
   steps:
-  - name: Test
+  - name: Run Tests
     run: dotnet test --no-build --verbosity normal
     shell: bash

@@ -4,5 +4,6 @@ description: Padroniza o build da solution
 runs:
   using: "composite"
   steps:
-  - run: dotnet build -C Release
+  - name: Built Solution
+    run: dotnet build -c Release
     shell: bash
