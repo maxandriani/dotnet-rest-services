@@ -15,5 +15,5 @@ jobs:
       uses: actions/upload-artifact@v3.1.0
       with:
         name: nuget_assemblies
-        path: **/*.nupkg
+        path: "**/*.nupkg"
         retention-days: 7
