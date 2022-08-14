@@ -1,0 +1,15 @@
+name: Build .NET Solution
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Restore dependencies
+      run: dotnet restore    
+
+    - name: Build
+      run: dotnet build --no-restore

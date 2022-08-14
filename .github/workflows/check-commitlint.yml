@@ -1,0 +1,15 @@
+name: Check Commit Conventions
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-commitlint:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup .NET
+      run: echo "commitlint run"

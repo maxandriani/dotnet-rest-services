@@ -1,0 +1,31 @@
+name: Build and Run Tests
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  build-and-tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: ./.github/workflows/setup-step.yml
+    - name: Build Solution
+      uses: ./.github/workflows/build-step.yml
+    - name: Run Tests
+      uses: ./.github/workflows/tests-step.yml
+    - name: Packing Artifacts
+      uses: ./.github/workflows/pack-step.yml
+
+  publish-on-nuget:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup .NET
+      uses: ./.github/workflows/setup-step.yml
+    - name: Publish Artifacts
+      uses: ./.github/workflows/publish-step.yml

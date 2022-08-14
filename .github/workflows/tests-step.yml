@@ -1,0 +1,12 @@
+name: Run Solution Tests
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
