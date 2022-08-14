@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Andriani.Rest.Core\Andriani.Rest.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>maxandriani</Authors>
+    <Description>Dotnet abstractions to quickly create fully compliance restfull services.</Description>
+    <PackageProjectUrl>https://github.com/maxandriani/dotnet-rest-services</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/maxandriani/dotnet-rest-services</RepositoryUrl>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\poc-verdureira-event-driven\Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+	</None>
+  </ItemGroup>
+
+</Project>
